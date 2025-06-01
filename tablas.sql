@@ -13,7 +13,7 @@ Id_libro integer PRIMARY KEY auto_increment,
 Titulo varchar(50),
 Id_autor integer,
 editorial varchar(50),
-fecha_publi date,
+fecha_publi datetime,
 cantidad integer,
 cant_dispon integer,
 Id_categoria integer);
@@ -30,7 +30,7 @@ Nombre varchar(50),
 Apellido varchar(50),
 Correo varchar(50),
 Telefono integer,
-fecha_registro date,
+fecha_registro datetime,
 tipo_usu varchar(50),
 estado varchar(50));
 
@@ -40,7 +40,7 @@ Id_usuario integer,
 monto integer,
 motivo varchar(50),
 estado varchar(50),
-fecha_registr date);
+fecha_registr datetime);
 
 CREATE TABLE TIPO_USU(
 Id_Tip_Usu integer PRIMARY KEY auto_increment,
@@ -54,8 +54,8 @@ CREATE TABLE PRESTAMOS(
 Id_prestamo integer PRIMARY KEY auto_increment,
 Id_Usuario integer,
 Id_libro integer,
-FECHA_Prest date,
-Fech_Devol date,
+FECHA_Prest DATETIME,
+Fech_Devol DATETIME,
 Observacion varchar(50),
 Cant_libro integer
 );
